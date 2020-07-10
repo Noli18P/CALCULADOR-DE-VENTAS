@@ -1,0 +1,41 @@
+#Created by Martin Martinez
+#Version 1.0
+#Created 09/07/2020
+
+print("+++++++++++++++++++++++++++++++++++++++++++++++++++")
+print("+Te ayudaré a contar tus ganancias de hoy! SUERTE!+")
+print("+++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+
+precios = []
+productos = []
+
+final = ""
+suma = 0
+totalDia = 0
+verProductos = ""
+
+while final != "si":
+    productos.append(input("Ingresa el nombre del producto: "))
+    precios.append(float(input("Ingresa el precio del producto: ")))
+
+    final = (input("\n¿Terminaste tus ventas? (SI / NO)"))
+    final.lower()
+
+    if final == "si":
+        print("\nTerminaste por hoy!\n")
+
+        for i in precios:
+            suma = suma + i
+            totalDia = suma
+            print("Felicidades ventiste ", totalDia, "pesos!")
+
+        verProductos = input("\n¿Quieres ver los productos que vendiste (SI / NO)?")
+        verProductos.lower()
+
+        if verProductos == "si":
+            print(productos)
+        else:
+            break
+
+print("\nTerminaste! Felicidades.")
